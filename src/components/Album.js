@@ -29,13 +29,23 @@ class Album extends Component {
                <col id="song-title-column" />
                <col id="song-duration-column" />
              </colgroup>
-             <tbody>
-             </tbody>
-           </table>
+           //   <tbody className="song-number">
+           //   {
+           //     this.state.album.songs.map(songs, index) =>
+           //     <tr>{key ="index + 1"}</tr>
+           //     <tr>{this.state.album.songs.duration}</tr>
+           //
+           //   }
+           //   </tbody>
+           // </table>
        </section>
      );
    }
  }
+
+
+
+
 
 
 export default Album;
