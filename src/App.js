@@ -13,8 +13,8 @@ class App extends Component {
       <header>
         <nav className="myNav">
           <ul className="navList">
-            <li clasName="navLanding"><Link to='/'>Landing</Link></li>
-            <li clasName="navLibrary"><Link to='/library'>Library</Link></li>
+            <li className="navLanding"><Link to='/'>Landing</Link></li>
+            <li className="navLibrary"><Link to='/library'>Library</Link></li>
           </ul>
         </nav>
        </header>
@@ -23,6 +23,7 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
        </main>
+       <div className="clear-fix"></div>
       </div>
     );
   }
