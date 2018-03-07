@@ -1,0 +1,59 @@
+
+.hero-title {
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4rem;
+  width: 100%;
+  color: white;
+  max-width: 80%;
+  margin: auto;
+}
+
+.ion-music-note, .ion-radio-waves, .ion-iphone {
+  color: rgb(233,50,117);
+  font-size: 5rem;
+}
+
+.point-title {
+  color: white;
+}
+
+.point-description {
+  color: white;
+}
+
+.selling-points div {
+  padding:2rem;
+}
+
+@media(min-width: 550px) {
+  .selling-points {display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: auto;}
+
+    .hero-title {
+      font-size: 6rem;
+
+     }
+
+  }
+
+
+
+@media(min-width: 900px) {
+  .selling-points {display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80%;
+
+
+  }
+
+
+
+  .hero-title {
+  font-size: 8rem;
+  
+   }
+
+}

@@ -14,6 +14,8 @@ class Album extends Component {
       album: album,
       currentSong: album.songs[0],
       currentTime: 0,
+      currentVolume:50,
+      allVolume:100,
       duration: album.songs[0].duration,
       isPlaying: false
      };
@@ -66,6 +68,15 @@ class Album extends Component {
      }
    }
 
+   playPauseButton(song, index) {
+     
+     const play = <button><span className="ion-play"></span></button>;
+     return play;
+     //<span className="song-number">{index+1}</span>
+
+     //<span className="ion-pause"></span>
+   }
+
    handlePrevClick() {
      const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
       const newIndex = Math.max(0, currentIndex - 1);
@@ -93,6 +104,35 @@ class Album extends Component {
      this.setState({ currentTime: newTime });
    }
 
+   handleVolumeChange(e) {
+   const newVolume = this.state.allVolume - this.state.currentVolume;
+   this.setState({ urrentVolume: newVolume });
+
+ }
+
+  /* const timeInSeconds = this.state.duration;
+  formatTime(timeInSeconds){
+  const secondAndMiliSecond = parseFloat(timeInSeconds);
+
+    if(secondAndMiliSecond.isNaN){ return "-:--"
+ }else {
+   const getRoundScond = Math.floor(secondAndMiliSecond);
+   const getMins = getRoundScond/ 60;
+   const getRoundMins = Math.floor(getMins);
+   const getSec = getRoundScond % 60;
+    return `<p>${getMins}:${getSec}</p>`
+
+ //   if(getSec > 9 ) {
+ //     var finalTime = getMins + ":" + getSec;
+ //     return finalTime;
+ // } else
+ //    var finalTimeWithZero = getMins + ":" + 0 + getSec;
+ //    return finalTimeWithZero;
+ //
+
+}
+} */
+
 
    render() {
      return (
@@ -116,12 +156,8 @@ class Album extends Component {
                this.state.album.songs.map((song, index) =>
                  <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                    <td className="song-actions">
-                    <button>
-                      <span className="ion-play"></span>
-                      <span className="ion-pause"></span>
-                    </button>
+                      {this.playPauseButton(song, index)}
                    </td>
-                   <td className="song-number">{index+1}</td>
                    <td>{song.title}</td>
                    <td>{song.duration}</td>
                   </tr>
@@ -130,14 +166,15 @@ class Album extends Component {
              </tbody>
            </table>
            <PlayerBar
-           isPlaying={this.state.isPlaying}
-           currentSong={this.state.currentSong}
-           currentTime={this.audioElement.currentTime}
-           duration={this.audioElement.duration}
-           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-           handlePrevClick={() => this.handlePrevClick()}
-           handleNextClick={() => this.handleNextClick()}
-           handleTimeChange={(e) => this.handleTimeChange(e)}
+             isPlaying={this.state.isPlaying}
+             currentSong={this.state.currentSong}
+             currentTime={this.audioElement.currentTime}
+             duration={this.audioElement.duration}
+             handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+             handlePrevClick={() => this.handlePrevClick()}
+             handleNextClick={() => this.handleNextClick()}
+             handleTimeChange={(e) => this.handleTimeChange(e)}
+             handleVolumeChange={(e) => this.handleVolumeChange(e)}
          />
        </section>
      );
