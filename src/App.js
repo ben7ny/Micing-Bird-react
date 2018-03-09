@@ -13,8 +13,8 @@ class App extends Component {
       <header>
         <nav className="myNav">
           <ul className="navList">
-            <li className="navLanding"><Link to='/'>Landing</Link></li>
-            <li className="navLibrary"><Link to='/library'>Library</Link></li>
+            <li className="navItem"><Link to='/'>Landing</Link></li>
+            <li className="navItem"><Link to='/library'>Library</Link></li>
           </ul>
         </nav>
        </header>

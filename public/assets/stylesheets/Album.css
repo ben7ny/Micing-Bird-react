@@ -1,0 +1,163 @@
+
+/* .album-info{
+min-width: 80%;
+display: block;
+} */
+
+.album-details{
+  color: white;
+}
+
+
+
+#album-cover-art{
+ width: 70%;
+}
+
+.song-info{
+  min-width: 80%;
+  display: block;
+  margin-top: 2rem;;
+}
+
+
+.player-set {
+  min-width: 80%;
+  margin-top: 2rem;
+
+}
+
+.player-bar{
+  min-height: 2rem;
+  display:grid;
+  grid-template-rows: 1fr  1fr 1fr;
+  grid-row-gap: 1.2rem;
+}
+
+
+
+
+.seekbar-time {
+  display: grid;
+  grid-template-columns:50% 50%;
+
+}
+
+
+.the-sound-bar {
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  align-items: center;
+
+}
+
+
+
+
+#song-list{
+  max-width: 80%;
+  line-height: 2rem;
+  display: table;
+  margin: auto;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-collapse: collapse;
+}
+
+.song-number{
+  display: table-row-group;
+}
+
+.song{
+  display: table-row;
+}
+
+td {
+    display: table-cell;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 0.5px solid white;
+}
+
+.song-actions {
+    width: 5%;
+    min-width: 30px;
+}
+
+.song-item-title {
+    width: 85%;
+}
+
+
+
+.song-item-duration {
+    width: 5%;
+}
+
+.song-item-title, .song-item-duration {
+  color: white;
+  opacity: 0.8;
+}
+
+.the-sound-bar{
+  display: grid;
+
+}
+
+#buttons button {
+  margin: 0 15px;
+  background-color: darkorange;
+  border: none;
+  color: ;
+  width: 25px;
+  height: 25px;
+}
+
+
+
+@media(min-width: 670px) {
+  .album {display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: auto;}
+
+    .album-info{
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    .song-info{
+      grid-column-start: span 2;
+    }
+
+    .player-set {
+      grid-column-start: span 2;
+
+    }
+
+
+
+    .player-bar{
+      margin-top: 3rem;
+      display:grid;
+      grid-template-columns: 1fr 1fr  1fr;
+    }
+
+    .the-sound-bar {
+      align-self: start;
+      margin-top: 0;
+
+    }
+
+
+    /* .the-sound-bar{
+      grid-column-start: span 2;
+    } */
+
+    #album-cover-art{
+     width: 80%;
+    }
+
+  }

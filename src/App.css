@@ -18,15 +18,14 @@ justify-content: end;
   min-height: 3rem;
 }
 
-   .navList li{
+   .navList li {
     display: inline;
     margin-right: 0.7rem;
     float: right;
 }
 
-.navList li:hover{
- font-size: 2em;
-}
+
+
 
 
 /* .clear-fix{
@@ -42,7 +41,10 @@ color: white;
 }
 
 
-
+a:hover {
+cursor: pointer;
+color: darkorange;
+}
 
 
 
