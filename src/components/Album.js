@@ -125,31 +125,31 @@ class Album extends Component {
      this.setState({ currentVolume: newVolume });
    }
 
-   realTime(currentTime){
-     const timeInSeconds = {currentTime};
-      console.log(timeInSeconds);
-    // formatTime(timeInSeconds){
-    //   const secondAndMiliSecond = parseFloat(timeInSeconds);
-    //
-    //       if(secondAndMiliSecond.isNaN){ return "-:--"
-    //    }else {
-    //            const getRoundScond = Math.floor(secondAndMiliSecond);
-    //            const getMins = getRoundScond/ 60;
-    //            const getRoundMins = Math.floor(getMins);
-    //            const getSec = getRoundScond % 60;
-                //return `<p>${getMins}:${getSec}</p>`
 
-             //   if(getSec > 9 ) {
-             //     var finalTime = getMins + ":" + getSec;
-             //     return finalTime;
-             // } else
-             //    var finalTimeWithZero = getMins + ":" + 0 + getSec;
-             //    return finalTimeWithZero;
-             //
+  // const timeInSeconds = this.state.duration;
 
-  //   }
-  // }
-}
+
+ //  formatTime(timeInSeconds){
+ //  const secondAndMiliSecond = parseFloat(timeInSeconds);
+ //
+ //    if(secondAndMiliSecond.isNaN){ return "-:--"
+ // }else {
+ //   const getRoundScond = Math.floor(secondAndMiliSecond);
+ //   const getMins = getRoundScond/ 60;
+ //   const getRoundMins = Math.floor(getMins);
+ //   const getSec = getRoundScond % 60;
+    //return `<p>${getMins}:${getSec}</p>`
+
+ //   if(getSec > 9 ) {
+ //     var finalTime = getMins + ":" + getSec;
+ //     return finalTime;
+ // } else
+ //    var finalTimeWithZero = getMins + ":" + 0 + getSec;
+ //    return finalTimeWithZero;
+ //
+
+// }
+// } */
 
 
    render() {

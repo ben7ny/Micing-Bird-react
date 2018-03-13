@@ -1,0 +1,39 @@
+/* .library::after {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+} */
+
+section.library img{
+max-width: 80%;
+margin: auto;
+}
+
+.library a{
+color: white;
+text-decoration: none;
+font-size: 1.5rem;
+}
+
+
+
+@media(min-width: 650px) {
+
+
+  section.library{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-column-gap: 2rem;
+
+  }
+
+
+  section.library img{
+  max-width: 80%;
+  margin: auto;
+  }
+
+  }

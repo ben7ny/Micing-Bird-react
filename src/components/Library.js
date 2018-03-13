@@ -7,9 +7,13 @@ class Library extends Component {
      super(props);
      this.state = { albums: albumData };
    }
+
+
    render() {
     return (
-      <section className='library test1 test2 test3'>
+
+      <section className='library'>
+
        {
          this.state.albums.map( (album, index) =>
            <Link to={`/album/${album.slug}`} key={index}>
@@ -21,6 +25,7 @@ class Library extends Component {
          )
        }
       </section>
+
      );
    }
  }

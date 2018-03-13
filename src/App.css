@@ -1,4 +1,10 @@
+body {
+    background-image: url("/assets/images/blurred_backgrounds/blur_bg_3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
+}
 
 .App {
   text-align: center;
@@ -12,10 +18,12 @@ justify-content: end;
 
 }  */
 
-.navList{
+.myNav{
+  display: grid;
+  grid-template-rows: 70% 30%;
   box-sizing: border-box;
   width: 100%;
-  min-height: 3rem;
+  min-height: 6rem;
 }
 
    .navList li {
@@ -24,9 +32,11 @@ justify-content: end;
     float: right;
 }
 
-
-
-
+.myNav .blocJam-logo{
+ position:fixed;
+ margin-left: 2rem;
+ margin-top: 1rem;
+}
 
 /* .clear-fix{
   clear: both;

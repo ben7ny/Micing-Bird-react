@@ -11,11 +11,13 @@ class App extends Component {
     return (
       <div className="App">
       <header>
+
         <nav className="myNav">
           <ul className="navList">
             <li className="navItem"><Link to='/'>Landing</Link></li>
             <li className="navItem"><Link to='/library'>Library</Link></li>
           </ul>
+          <div className="blocJam-logo"><Link to='/'> <img className="bj-logo" src="/assets/images/bloc_jams_logo.png" alt="logo"/></Link></div>
         </nav>
        </header>
        <main>
