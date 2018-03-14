@@ -25,6 +25,7 @@ class Album extends Component {
    }
 
    componentDidMount() {
+     document.body.style.backgroundImage = "none";
      this.eventListeners = {
        timeupdate: e => {
          this.setState({ currentTime: this.audioElement.currentTime });
@@ -38,6 +39,7 @@ class Album extends Component {
    }
 
    componentWillUnmount() {
+     document.body.style.backgroundImage = "url('/assets/images/blurred_backgrounds/blur_bg_3.jpg')";
      this.audioElement.src = null;
      this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
      this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);

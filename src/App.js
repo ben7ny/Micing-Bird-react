@@ -25,7 +25,6 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
        </main>
-       <div className="clear-fix"></div>
       </div>
     );
   }

@@ -1,3 +1,8 @@
+html{
+  min-height: 100%;
+
+}
+
 body {
     background-image: url("/assets/images/blurred_backgrounds/blur_bg_3.jpg");
     background-repeat: no-repeat;
