@@ -9,7 +9,7 @@ import React, { Component } from 'react';
              <button id="previous" onClick={this.props.handlePrevClick}>
                <span className="ion-skip-backward"></span>
              </button>
-             <button id="play-pause" onClick={this.props.handleSongClick} onMouseEnter={this.props.playPauseButton} >
+             <button id="play-pause" onClick={this.props.handleSongClick}>
                <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
              </button>
              <button id="next" onClick={this.props.handleNextClick}>
