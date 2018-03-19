@@ -30,8 +30,8 @@ import React, { Component } from 'react';
                    />
               </div>
               <div className="seekbar-time">
-                 <div className="current-time">{this.props.currentTime}</div>
-                 <div className="total-time">{this.props.duration}</div>
+                 <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
+                 <div className="total-time">{this.props.formatTime(this.props.duration - this.props.currentTime)}</div>
              </div>
           </div>
          <div className="the-sound-bar">

@@ -143,23 +143,24 @@ class Album extends Component {
 
 
   formatTime(seconds){
-  const secondAndMiliSecond = parseFloat(seconds);
+    const secondAndMiliSecond = parseFloat(seconds);
 
-  if(secondAndMiliSecond.isNaN){ return "-:--"
- }else {
-   const getRoundScond = Math.floor(secondAndMiliSecond);
-   const getMins = getRoundScond/ 60;
-   const getRoundMins = Math.floor(getMins);
-   const getSec = getRoundScond % 60;
-    return `${getMins}:${getSec}`
+    if(secondAndMiliSecond.isNaN){return "-:--"
+   }else {
+     const getRoundScond = Math.floor(secondAndMiliSecond);
+     const getMins = getRoundScond/ 60;
+     const getRoundMins = Math.floor(getMins);
+     const getSec = getRoundScond % 60;
 
- //   if(getSec > 9 ) {
- //     var finalTime = getMins + ":" + getSec;
- //     return finalTime;
- // } else
- //    var finalTimeWithZero = getMins + ":" + 0 + getSec;
- //    return finalTimeWithZero;
- }
+
+   if(getSec < 10) {
+       return `${getRoundMins}:0${getSec}`
+     } else if(getSec >= 10){
+        return `${getRoundMins}:${getSec}`
+     }
+
+  }
+
 }
 
 
@@ -203,6 +204,7 @@ class Album extends Component {
                handleNextClick={() => this.handleNextClick()}
                handleTimeChange={(e) => this.handleTimeChange(e)}
                handleVolumeChange={(e) => this.handleVolumeChange(e)}
+               formatTime={(seconds)=>this.formatTime(seconds)}
            />
          </div>
        </section>
