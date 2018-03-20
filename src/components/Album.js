@@ -155,7 +155,7 @@ class Album extends Component {
 
    if(getSec < 10) {
        return `${getRoundMins}:0${getSec}`
-     } else if(getSec >= 10){
+     } else {
         return `${getRoundMins}:${getSec}`
      }
 
